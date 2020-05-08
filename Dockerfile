@@ -1,5 +1,4 @@
 FROM openjdk:8
 COPY ./target/myCalc-1.0-SNAPSHOT-jar-with-dependencies.jar ./
 WORKDIR ./
-EXPOSE 8055:8055
-CMD ["java", "-jar", "mycalc-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["java", "-jar", "myCalc-1.0-SNAPSHOT-jar-with-dependencies.jar"]
