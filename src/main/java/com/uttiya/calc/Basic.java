@@ -1,8 +1,11 @@
 package com.uttiya.calc;
 
 import java.util.Scanner;
+import org.apache.log4j.Logger;
 
 public class Basic {
+
+    private static final Logger logger = Logger.getLogger(Basic.class);
 
     public static void main(String[] args) {
 
@@ -42,7 +45,7 @@ public class Basic {
                     a = sc.nextFloat();
                     System.out.println("Enter second number:");
                     b = sc.nextFloat();
-                    res = basic.substract(a, b);
+                    res = basic.subtract(a, b);
                     System.out.println("Difference is =" + res);
                     break;
 
@@ -79,25 +82,37 @@ public class Basic {
 
     }
 
-    float divide(float a, float b) {
-        if(b==0)
-            return Float.POSITIVE_INFINITY;
-        else
-            return a / b;
-
-    }
-
-    float multiply(float a, float b) {
-        return a*b;
-    }
-
-    float substract(float a, float b) {
-        return a-b;
-    }
-
     float add(float a,float b){
-
-        return a+b;
-
+        logger.info("Adding " + a + " with " + b);
+        float c=a+b;
+        logger.info("Result is" + c);
+        return c;
     }
+
+    float subtract(float a,float b){
+        logger.info("Subtracting " + a + " from " + b);
+        float c=a-b;
+        logger.info("Result is" + c);
+        return c;
+    }
+
+    float multiply(float a,float b){
+        logger.info("Multiplying " + a + " with " + b);
+        float c=a*b;
+        logger.info("Result is" + c);
+        return c;
+    }
+
+    float divide(float a, float b) {
+        logger.info("Dividing " + a + " by " + b);
+        if(b==0) {
+            logger.info("Division by zero error");
+            return Float.POSITIVE_INFINITY;
+        }else {
+            float c=a/b;
+            logger.info("Result is" + c);
+            return c;
+        }
+    }
+
 }

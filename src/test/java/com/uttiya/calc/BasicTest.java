@@ -18,8 +18,8 @@ public class BasicTest {
     public void testSubstract(){
 
         Basic basic=new Basic();
-        Assert.assertEquals(basic.substract(55.3f, 28.9f),26.4f,0.01f);
-        Assert.assertEquals(basic.substract(19.62f, 20.12f),-0.5f,0.01f);
+        Assert.assertEquals(basic.subtract(55.3f, 28.9f),26.4f,0.01f);
+        Assert.assertEquals(basic.subtract(19.62f, 20.12f),-0.5f,0.01f);
 
     }
 
