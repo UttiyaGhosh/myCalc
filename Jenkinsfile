@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/UttiyaGhosh/myCalc'
+        git 'https://github.com/UttiyaGhosh/myCalc.git'
       }
     }
     stage('Build'){
@@ -51,7 +51,7 @@ pipeline {
             step([$class: "RundeckNotifier",
                   includeRundeckLogs: true,
                   jobId: "f5e40943-bcdc-4804-a1da-061128e865e2",
-                  rundeckInstance: "testlabel",
+                  rundeckInstance: "myCalc",
                   shouldFailTheBuild: true,
                   shouldWaitForRundeckJob: true,
                   tailLog: true])
