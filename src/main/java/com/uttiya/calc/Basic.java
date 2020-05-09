@@ -23,31 +23,43 @@ public class Basic {
 
             System.out.println("Enter your choice:");
             choice = sc.next().charAt(0);
-            System.out.println("Add first number:");
-            a = sc.nextFloat();
-            System.out.println("Add second number:");
-            b = sc.nextFloat();
 
             switch (choice) {
 
 
-                case '1':
 
+                case '1':
+                    System.out.println("Enter first number:");
+                    a = sc.nextFloat();
+                    System.out.println("Enter second number:");
+                    b = sc.nextFloat();
                     res = basic.add(a, b);
                     System.out.println("Sum is =" + res);
                     break;
 
                 case '2':
+                    System.out.println("Enter first number:");
+                    a = sc.nextFloat();
+                    System.out.println("Enter second number:");
+                    b = sc.nextFloat();
                     res = basic.substract(a, b);
                     System.out.println("Difference is =" + res);
                     break;
 
                 case '3':
+                    System.out.println("Enter first number:");
+                    a = sc.nextFloat();
+                    System.out.println("Enter second number:");
+                    b = sc.nextFloat();
                     res = basic.multiply(a, b);
                     System.out.println("Product is =" + res);
                     break;
 
                 case '4':
+                    System.out.println("Enter first number:");
+                    a = sc.nextFloat();
+                    System.out.println("Enter second number:");
+                    b = sc.nextFloat();
                     res = basic.divide(a, b);
                     if(res==Float.POSITIVE_INFINITY)
                         System.out.println("Division by 0 is not possible");
@@ -56,7 +68,7 @@ public class Basic {
                     break;
 
                 case '5':
-                    System.exit(0);
+                    System.out.println("Bye!");
                     break;
 
                 default:
