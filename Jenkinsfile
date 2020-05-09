@@ -6,7 +6,7 @@ pipeline {
     dockerImageLatest = ''
   }
   triggers {
-        pollSCM 'H/2 * * * *'
+        pollSCM 'H/1 * * * *'
     }
   agent any
   stages {
