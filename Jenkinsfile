@@ -5,6 +5,9 @@ pipeline {
     dockerImage = ''
     dockerImageLatest = ''
   }
+  options {
+       skipDefaultCheckout true
+     }
   triggers {
         pollSCM 'H/2 * * * *'
     }
