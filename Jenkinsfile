@@ -5,6 +5,9 @@ pipeline {
     dockerImage = ''
     dockerImageLatest = ''
   }
+  triggers {
+        pollSCM 'H/1 * * * *'
+    }
   agent any
   stages {
     stage('Cloning Git') {
